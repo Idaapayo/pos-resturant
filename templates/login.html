@@ -1,0 +1,37 @@
+{%  extends 'base.html' %}
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Login Page </title>
+{#<link rel="stylesheet", type="text/css", href="{% static 'css/styles.css' %}">#}
+</head>
+<body>
+{% block content %}
+    <link rel="stylesheet", type="text/css", href="{% static 'css/styles.css' %}">
+    <img src="{% static "images/randpic.jpg" %}" alt="My image">
+    <center> <h1> Login </h1> </center>
+    <form action="login" method="post">
+    {% csrf_token %}
+        <div class="container">
+            <label>Username {{ name }} : </label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+            <label>Password : </label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+            <button type="submit">Login</button>
+            <input type="checkbox" checked="checked"> Remember me
+            <button type="button" class="cancelbtn"> Cancel</button>
+             <a href="/registration"> Sign in? </a>
+        </div>
+        <div>
+                {% for message in messages %}
+                    <h2>{{ message }}</h2>
+                {% endfor %}
+        </div>
+    </form>
+
+{% endblock %}
+</body>
