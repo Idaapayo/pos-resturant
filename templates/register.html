@@ -1,47 +1,64 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block content %}
-<div id="register" class="container">
-			<form  action="registration" method ="post">
-                {% csrf_token %}
-				<h1> Sign up </h1>
-                <p>
-					<label for="firstname">Firstname</label>
-					<input id="firstname" name="firstname" required="required" type="text" placeholder="Firstname" />
-				</p>
-                <p>
-					<label for="lastname">Lastname</label>
-					<input id="lastname" name="lastname" required="required" type="text" placeholder="Lastname" />
-				</p>
-				<p>
-					<label for="usernamesignup" class="uname" data-icon="u">Username</label>
-					<input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
-				</p>
-				<p>
-					<label for="emailsignup" class="youmail" data-icon="e" > Your email</label>
-					<input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com"/>
-				</p>
-				<p>
-					<label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
-					<input id="passwordsignup" name="passwordsignup1" required="required" type="password" placeholder="eg. X8df!90EO"/>
-				</p>
-				<p>
-					<label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
-					<input id="passwordsignup_confirm" name="passwordsignup2" required="required" type="password" placeholder="eg. X8df!90EO"/>
-				</p>
-				<p class="signin button">
-					<input type="submit" value="Sign up"/>
-				</p>
-				<p class="change_link">
-					Already a member ?
-					<a href="/login" class="to_register"> Go and log in </a>
-				</p>
-			</form>
-            <div>
-                {% for message in messages %}
-                    <h2>{{ message }}</h2>
-                {% endfor %}
-            </div>
-		</div>
+<!-- Mobile Specific Metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- Main Style Css -->
+<link rel="stylesheet" href="{% static 'css/signupcss.css' %}"/>
+
+<!-- Bootstrap core CSS -->
+<link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+<body class="form_v5">
+    <div id="register" class="container-fluid bg">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-6 col-md-3">
+                <form  class = "form-container", action="registration" method ="post">
+                    {% csrf_token %}
+
+                    <h1> Sign up </h1><br>
+
+                            <div class="form-group">
+                                <label for="firstname">Firstname</label>
+                                <input id="firstname" name="firstname" required="required" type="text" placeholder="Firstname" class="input-text" />
+                            </div>
+                            <div class="form-group">
+                                <label for="lastname">Lastname</label>
+                                <input id="lastname" name="lastname" required="required" type="text" placeholder="Lastname" class="input-text"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="usernamesignup" class="uname" data-icon="u">Username</label>
+                                <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" class="input-text" />
+                            </div>
+                            <div class="form-group">
+                                <label for="emailsignup" class="youmail" data-icon="e" > Your email</label>
+                                <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com" class="input-text"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="passwordsignup" class="youpasswd" data-icon="p">Password </label>
+                                <input id="passwordsignup" name="passwordsignup1" required="required" type="password" placeholder="eg. X8df!90EO" class="input-text"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="passwordsignup_confirm" class="youpasswd" data-icon="p"> Confirm password </label>
+                                <input id="passwordsignup_confirm" name="passwordsignup2" required="required" type="password" placeholder="eg. X8df!90EO" class="input-text"/>
+                            </div>
+                            <p class="form-row-last">
+                                <input type="submit" value="Sign up" class="btn-block"/>
+                            </p>
+                            <p class="change_link">
+                                Already a member ?
+                                <a href="/login" class="to_register"> Go and log in </a>
+                            </p>
+                </form>
+
+                <div>
+                    {% for message in messages %}
+                        <h2>{{ message }}</h2>
+                    {% endfor %}
+                </div>
+
+             </div>
+        </div>
+    </div>
+</body>
 {% endblock %}
