@@ -60,8 +60,9 @@ h1{
   color: blue;
 }
 .row_style{
-	padding-left: 40px;
+    padding-top: 10px;
+	padding-left: 20px;
 }
-.container-fluid.backcolor{
-  background-color:   #e7e7e7;
+.carouselrows{
+  padding-top: 15px;
 }

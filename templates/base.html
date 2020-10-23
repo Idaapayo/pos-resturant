@@ -1,22 +1,20 @@
 {% load static %}
-{% block content %}
-
-
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'css/simple-sidebar.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/simple-sidebar.css' %}" type="text/css"/>
     <title> Base Page </title>
 </head>
 <body>
+<div class="container-fluid backcolor">
    <div class="d-flex" id="wrapper">
 
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
       <div class="sidebar-heading">Rest POS</div>
       <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-light">Drinks</a>
+        <a href="/login" class="list-group-item list-group-item-action bg-light">Drinks</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Food</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Orders</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Staff</a>
@@ -24,6 +22,7 @@
         <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
       </div>
     </div>
+
     <!-- /#sidebar-wrapper -->
 
     <!-- Page Content -->
@@ -31,12 +30,35 @@
 
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
         <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+
           {% if user.is_authenticated %}
           <li>Logged in as: {{user.username }}</li>
-        <a href="/logout">Logout</a>
+          <a href="/logout">Logout</a>
           {% endif %}
       </nav>
+
+        <div class="row row_style">
+
+            {% block content %}
+
+            {% endblock %}
+        </div>
     </div>
    </div>
+</div>
+
+
+<!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
 </body>
-{% endblock %}
+
+
