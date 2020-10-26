@@ -1,26 +1,46 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+
 <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 <link href="{% static 'css/food_page.css' %}" rel="stylesheet">
 
 <!-- Bootstrap core JavaScript -->
+
 <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
 <script src="{% static 'js_scripts/food_page.js' %}"></script>
 
+
 <div class="col-md-8">
-<div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-secondary">Breakfast</button>
-  <button type="button" class="btn btn-secondary">Lunch</button>
-  <button type="button" class="btn btn-secondary">Dinner</button>
-  <button type="button" class="btn btn-secondary">Dessert</button>
-  <button type="button" class="btn btn-secondary">Snacks</button>
-</div>
+    <div class="row">
+        <div class="col-md-2">
+            <div class="dropdown">
+              <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Categories
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="{% url 'food_home' %}">Food </a>
+                <a class="dropdown-item" href="{% url 'drinks' %}">Drinks</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-secondary">Breakfast</button>
+          <button type="button" class="btn btn-secondary">Lunch</button>
+          <button type="button" class="btn btn-secondary">Dinner</button>
+          <button type="button" class="btn btn-secondary">Dessert</button>
+          <button type="button" class="btn btn-secondary">Snacks</button>
+            </div>
+        </div>
+
+
+    </div>
 
 <!-- carousel items -->
 
-    <div id="carouselExampleIndicators" class="carousel slide">
+    <div id="carouselExampleIndicators" class="carousel slide" data-interval="false">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -31,70 +51,70 @@
             <div class="carousel-item active">
                 <div class="row carouselrows">
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                      <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                 </div>
                 <div class="row carouselrows">
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                      <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                 </div>
                 <div class="row carouselrows">
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                      <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                 </div>
                 <div class="row carouselrows">
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                      <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                 </div>
             </div>
@@ -102,70 +122,70 @@
             <div class="carousel-item">
                <div class="row carouselrows">
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                      <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                 </div>
                 <div class="row carouselrows">
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                      <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                 </div>
                 <div class="row carouselrows">
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                      <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                 </div>
                 <div class="row carouselrows">
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                      <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                 </div>
             </div>
@@ -173,70 +193,70 @@
             <div class="carousel-item">
                <div class="row carouselrows">
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                      <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                 </div>
                 <div class="row carouselrows">
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                      <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                 </div>
                 <div class="row carouselrows">
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                      <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                 </div>
                 <div class="row carouselrows">
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                     <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                      <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn  btn-lg button-color">Large button</button>
                     </div>
                 </div>
             </div>
@@ -252,7 +272,7 @@
     </div>
 </div>
 <div class="col-md-4">
-    <div class="btn-group" role="group" aria-label="Basic example">
+    <div class="btn-group btn-space" role="group" aria-label="Basic example">
       <button type="button" class="btn btn-secondary">Some</button>
       <button type="button" class="btn btn-secondary">funct</button>
     </div>
@@ -267,23 +287,40 @@
           </thead>
           <tbody>
             <tr>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
+              <td>Expresso</td>
+              <td>1</td>
+              <td>1800</td>
             </tr>
             <tr>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
+              <td>Pilau</td>
+              <td>2</td>
+              <td>2000</td>
             </tr>
             <tr>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
+              <td>Icecream</td>
+              <td>3</td>
+                <td>160</td>
+            </tr>
+            <tr>
+                <td> Subtotal</td>
+                <td></td>
+                <td> 4500</td>
+            </tr>
+            <tr>
+                <td> Tax</td>
+                <td></td>
+                <td>327</td>
+            </tr>
+            <tr>
+                <td class="font-weight-bold"> Total</td>
             </tr>
           </tbody>
         </table>
+
+
     </div>
 </div>
+
 
 {#<h2>hello</h2>#}
 {% endblock %}

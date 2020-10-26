@@ -66,3 +66,16 @@ h1{
 .carouselrows{
   padding-top: 15px;
 }
+.btn-space{
+  padding-bottom: 10px;
+}
+.border_checkout{
+  padding-top: 10px;
+  border-radius: 15px;
+  background-color:  #3d6098;
+  width: 100%;
+  height: 100%;
+}
+.button-color{
+  background-color: #3d6098 ;
+}

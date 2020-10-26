@@ -1,8 +1,4 @@
-jQuery(window).load(function() {
+$(document).ready( function() {
 
-    /*
-        Stop carousel
-    */
-    $('.carousel').carousel('pause');
 
 });
