@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8996247-2d3d-4cf6-8e26-c654aedae1bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pos.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/food/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/food/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pos/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/pos/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pos/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pos/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/food_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/food_page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/signupcss.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/signupcss.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/simple-sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/simple-sidebar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js_scripts/food_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js_scripts/food_page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/food.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/food.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index_page.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +100,8 @@
       <workItem from="1603095011271" duration="5294000" />
       <workItem from="1603213834800" duration="40933000" />
       <workItem from="1603562803688" duration="2418000" />
-      <workItem from="1603619945051" duration="27571000" />
+      <workItem from="1603619945051" duration="37160000" />
+      <workItem from="1603776602057" duration="5676000" />
     </task>
     <servers />
   </component>

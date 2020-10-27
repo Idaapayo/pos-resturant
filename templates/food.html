@@ -288,20 +288,50 @@
           <tbody>
             <tr>
               <td>Expresso</td>
-              <td>1</td>
+              <td>
+                <div class="input-group inputsize">
+                  <span class="input-group-btn">
+                      <button id="decrement" type="button" class="btn btn-warning btn-number "  data-type="minus" data-field="quant[2]">-</button>
+                  </span>
+                  <input id = "input-number" type="text" name="quant[2]" class="form-control input-number" value="1" min="1" max="100">
+                  <span class="input-group-btn">
+                      <button id="increment" type="button" class="btn btn-warning btn-number " data-type="plus" data-field="quant[2]">+</button>
+                  </span>
+                </div>
+              </td>
               <td>1800</td>
             </tr>
             <tr>
               <td>Pilau</td>
-              <td>2</td>
+              <td>
+                   <div class="input-group inputsize">
+                  <span class="input-group-btn">
+                      <button id="decrement1" type="button" class="btn btn-warning btn-number "  data-type="minus" data-field="quant[2]">-</button>
+                  </span>
+                  <input id ="input-number1" type="text" name="quant[2]" class="form-control input-number" value="1" min="1" max="100">
+                  <span class="input-group-btn">
+                      <button id="increment1" type="button" class="btn btn-warning btn-number " data-type="plus" data-field="quant[2]">+</button>
+                  </span>
+                </div>
+              </td>
               <td>2000</td>
             </tr>
             <tr>
               <td>Icecream</td>
-              <td>3</td>
+              <td>
+                   <div class="input-group inputsize">
+                  <span class="input-group-btn">
+                      <button id="decrement2" type="button" class="btn btn-warning btn-number "  data-type="minus" data-field="quant[2]">-</button>
+                  </span>
+                  <input id="input-number2" type="text" name="quant[2]" class="form-control input-number" value="1" min="1" max="100">
+                  <span class="input-group-btn">
+                      <button id="increment2" type="button" class="btn btn-warning btn-number " data-type="plus" data-field="quant[2]">+</button>
+                  </span>
+                </div>
+              </td>
                 <td>160</td>
             </tr>
-            <tr>
+            <tr class="line-above">
                 <td> Subtotal</td>
                 <td></td>
                 <td> 4500</td>
@@ -311,8 +341,13 @@
                 <td></td>
                 <td>327</td>
             </tr>
-            <tr>
+            <tr class="line-above">
                 <td class="font-weight-bold"> Total</td>
+                <td></td>
+                <td>327</td>
+            </tr>
+            <tr>
+                <th colspan="3"><button class="btn btn-warning btnextend"> checkout</button></th>
             </tr>
           </tbody>
         </table>
