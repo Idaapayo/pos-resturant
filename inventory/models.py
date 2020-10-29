@@ -17,14 +17,15 @@ category_choices =  (
     ('Drinks', "drinks")
 )
 
-# subcateg_choices = (
-#
-# )
+subcateg_choices = (
+    ('Food', 'food'),
+    ('Drinks', "drinks")
+)
 
 class Products(models.Model):
     items = models.CharField(max_length=100)
-    category = models.CharField(max_length=100, choices=category_choices)
-    subcategory = models.CharField(max_length=100)
+    category = models.CharField(choices=category_choices, max_length=100)
+    subcategory = models.CharField(choices=subcateg_choices, max_length=100)
     price = models.FloatField(max_length=100)
 
     def __str___(self):

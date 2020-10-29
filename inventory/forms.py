@@ -1,13 +1,14 @@
+from django.forms import ModelForm, Textarea
+from .models import Products, Csv
 from django import forms
 
+class ProductsForm(ModelForm):
+    class Meta:
+        model = Products
+        fields = '__all__'
+        # widgets = {'items': Textarea(attrs={})}
 
-category_choices =  (
-    ('Food', 'food'),
-    ('Drinks', "drinks")
-)
 
-class addproducts_form(forms.Form):
-    items = forms.CharField(max_length=100)
-    categories = forms.ChoiceField(choices=category_choices)
-    subcategory = forms.CharField(max_length=100)
-    price = forms.FloatField(max_length=100)
+
+
+

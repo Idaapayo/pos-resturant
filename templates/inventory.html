@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
 {% block content %}
  <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 <link rel="stylesheet" href="{% static 'css/inventory.css' %}" type="text/css"/>
 <script src="https://kit.fontawesome.com/961150d9ae.js" crossorigin="anonymous"></script>
     <div class="container-padding">
-        <button  type="button" class="btn btn-warning" aria-hidden="true" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-plus"></i>&nbsp;Add sale products</button>
+        <button type="button" class="btn btn-warning" aria-hidden="true" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-plus"></i>&nbsp;Add sale products</button>
 {#        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>#}
 
         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -19,35 +20,21 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form class="form-style" action="/addproducts" method="post">
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1">Item</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1">
-                        </div>
-                         <div class="form-group">
-                            <label for="exampleFormControlSelect1">Select category</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                              <option>Food</option>
-                              <option>Drinks</option>
-                            </select>
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleFormControlSelect1">Select sub-category</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                              <option>1</option>
-                              <option>2</option>
-                            </select>
-                          </div>
-                         <div class="form-group">
-                            <label for="exampleFormControlInput1">Price</label>
-                            <input type="number" class="form-control" id="exampleFormControlInput1">
+                    <form class="form-style" action="/inventory_home" method="post">
+                        {% csrf_token %}
+                        {{product_form|crispy}}
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-warning">Save changes</button>
                         </div>
                     </form>
+
+
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-warning">Save changes</button>
-                </div>
+{#                <div class="modal-footer">#}
+{#                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>#}
+{#                    <button type="button" class="btn btn-warning">Save changes</button>#}
+{#                </div>#}
 
             </div>
           </div>
