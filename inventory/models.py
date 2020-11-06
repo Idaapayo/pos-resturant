@@ -18,8 +18,17 @@ category_choices =  (
 )
 
 subcateg_choices = (
-    ('Food', 'food'),
-    ('Drinks', "drinks")
+    ('Appetizer', 'appetizer'),
+    ('Sandwiches', 'sandwiches'),
+    ('Burgers', "burgers"),
+    ('Salads', "salads"),
+    ('Vegeterian', "vegeterian"),
+    ('Maindishes', "maindishes"),
+    ('Soups', "soups"),
+    ('Pizza', "pizza"),
+    ('Dessert', 'dessert'),
+    ('Cocktail', "cocktail"),
+    ('Coffee', "coffee")
 )
 
 class Products(models.Model):
