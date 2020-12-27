@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse_lazy, reverse
 
 # Create your models here.
 
@@ -7,6 +8,9 @@ class Csv(models.Model):
     file_name = models.FileField(upload_to="excelFiles")
     uploaded = models.DateTimeField(auto_now_add=True)
     activated = models.BooleanField(default=False)
+
+    # def get_absolute_url(self):
+    #     return reverse('inventory_home')
 
     def __str__(self):
         return f"files id:{self.id}"
@@ -37,7 +41,10 @@ class Products(models.Model):
     subcategory = models.CharField(choices=subcateg_choices, max_length=100)
     price = models.FloatField(max_length=100)
 
-    def __str___(self):
+    # def get_absolute_url(self):
+    #     return reverse("inventory_home")
+
+    def __str__(self):
         return f"{self.items}"
 
 

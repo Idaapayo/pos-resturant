@@ -3,13 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="f8996247-2d3d-4cf6-8e26-c654aedae1bb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/excelFiles/Ujamaa-restaurant-menu.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/excelFiles/menuitems_DfpBJ1I.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/excelFiles/menuitems_EyUPHWi.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/excelFiles/menuitems_IyCOTPy.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/excelFiles/menuitems_LXSBOv2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/excelFiles/menuitems_O20t2DE.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/excelFiles/menuitems_WRzhvFV.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/excelFiles/menuitems_nlzOzYn.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/excelFiles/menuitems_vVl9PLK.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/excelFiles/menuitems_wvEXgpI.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pos/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/pos/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pos/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pos/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/inventory.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/inventory.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/inventory.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/inventory.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,6 +39,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/static/css" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
@@ -109,7 +124,21 @@
       <workItem from="1604387762657" duration="3911000" />
       <workItem from="1604419999681" duration="7121000" />
       <workItem from="1604456146124" duration="5496000" />
-      <workItem from="1604556449387" duration="19746000" />
+      <workItem from="1604556449387" duration="29103000" />
+      <workItem from="1604828775500" duration="14676000" />
+      <workItem from="1604998036945" duration="2573000" />
+      <workItem from="1605071373088" duration="7399000" />
+      <workItem from="1605169212852" duration="10521000" />
+      <workItem from="1605434042244" duration="10275000" />
+      <workItem from="1605511322146" duration="15835000" />
+      <workItem from="1605674179139" duration="2530000" />
+      <workItem from="1605777589939" duration="19173000" />
+      <workItem from="1606121798711" duration="1197000" />
+      <workItem from="1606204797157" duration="13601000" />
+      <workItem from="1606291009258" duration="2462000" />
+      <workItem from="1606992387205" duration="8819000" />
+      <workItem from="1608270933986" duration="87000" />
+      <workItem from="1609053075742" duration="9930000" />
     </task>
     <servers />
   </component>

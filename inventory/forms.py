@@ -3,6 +3,11 @@ from .models import Products, Csv
 from django import forms
 import io
 import csv
+from betterforms.multiform import MultiModelForm
+
+# class Multipleform(forms.Form):
+#     action = forms.CharField(max_length=60, widget=forms.HiddenInput())
+
 
 
 class ProductsForm(ModelForm):
@@ -11,24 +16,17 @@ class ProductsForm(ModelForm):
         fields = '__all__'
         widgets = {'price': forms.TextInput()}
 
-class uploadproducts(ModelForm):
+class Uploadproducts(ModelForm):
     class Meta:
         model = Csv
         fields = ('file_name',)
 
-    def process_data():
-        """fun to add csv column data into database"""
+# class Products_upload(MultiModelForm):
+#     form_classes = {
+#         'product_form': ProductsForm,
+#         'uploadcsv_form': Uploadproducts
+#     }
 
-        # file = io.TextIOWrapper(cleaned_data['file_name'].file)
-        # reader = csv.DictReader(file)
-        #
-        # for product in reader:
-        #     Products.objects.get_or_create(
-        #         items=product[0],
-        #         category=product[1],
-        #         subcategory=product[2],
-        #         price = product[3]
-        #     )
 
 
 

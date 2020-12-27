@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'food',
     'crispy_forms',
     'import_export',
+    'betterforms',
     'login.apps.LoginConfig',
     'django.contrib.admin',
     'django.contrib.auth',

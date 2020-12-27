@@ -1,46 +1,71 @@
-from django.shortcuts import render, redirect
-from .forms import ProductsForm, uploadproducts
+from django.shortcuts import render, redirect, get_object_or_404
+from .forms import ProductsForm, Uploadproducts
 from django.contrib import messages
 import io
 import csv
 from .models import Products
+from multi_form_view import MultiFormView, MultiModelFormView
+from django.urls import reverse_lazy
+from django.views.generic.edit import ModelFormMixin, CreateView
+from django.http import HttpResponseForbidden
 
-# Create your views here.
 
 
+class Inventory_view(MultiModelFormView):
+    template_name = 'inventory.html'
+    form_classes = {
+        'product_form': ProductsForm,
+        'upload_form': Uploadproducts
+    }
+    success_url = reverse_lazy("inventory_home")
 
 
-def inventory_home(request):
+    def post(self, request, *args, **kwargs):
 
-    product_form = ProductsForm()
-
-    if request.method == 'POST':
-
-        #menu item save form logic
+        # action = self.request.POST.get('action')
+        # action1 = self.request.POST.get('action1')
+        # print(action)
+        # if action == 'product_form':
+        print("submiting prod_form")
         product_form = ProductsForm(request.POST)
-        if product_form.is_valid():
+        self.product_form(product_form, request)
+
+        # if action == 'upload_form':
+        print("submiting upload_form")
+        upload_form = Uploadproducts(request.POST, request.FILES)
+        self.upload_csv(upload_form, request)
+        return super().post(request, **kwargs)
+
+
+    def product_form(self, form_name, request):
+        """
+        fun to process the ProductsForm to store a menu item
+        :param form_name:
+        :param form_classes:
+        :return:
+        """
+        product_form = form_name
+
+        if not product_form:
+            return HttpResponseForbidden()
+        elif product_form.is_valid():
             print("form is valid")
             items = product_form.cleaned_data['items']
             category = product_form.cleaned_data['category']
             subcategory = product_form.cleaned_data['subcategory']
             price = product_form.cleaned_data['price']
             product_form.save()
-            messages.success(request, 'Menu item added')
-            # redirect('addproducts')
+            messages.success(request, "menu item added")
         else:
-            product_form = ProductsForm()
-    else:
-        print("using get")
-    context = {'product_form': product_form}
-    return render(request, 'inventory.html', context )
+            return self.form_invalid(product_form)
 
-def uploadfile(request):
-    upload_form = uploadproducts()
-    if request.method == 'POST':
-        upload_form = uploadproducts(request.POST, request.FILES)
+    def upload_csv(self, form_name, request):
 
-        # upload excelfie form logic
+        print("in upload form")
+        upload_form = form_name
+
         if upload_form.is_valid():
+            print("form is val")
             csv_file = request.FILES['file_name']
             if not csv_file.name.endswith('.csv'):
                 messages.error(request, "This is not a csv file")
@@ -56,13 +81,9 @@ def uploadfile(request):
                     subcategory=column[2],
                     price=column[3]
                 )
-            print("form upload is valid")
             upload_form.save()
             messages.success(request, "file has been uploaded")
         else:
-            print("not valid")
-    else:
-        print("using get")
-    context = {'upload_form': upload_form}
-    return render(request, 'inventory.html', context)
+            return self.form_invalid(upload_form)
+
 

@@ -1,7 +1,8 @@
-from django.urls import path
+from django.urls import path, re_path
 from . import views
+from inventory.views import Inventory_view
 
 urlpatterns = [
-    path('', views.inventory_home , name='inventory_home'),
-    path('uploadfile', views.uploadfile, name='uploadfile')
+    re_path(r'^$', Inventory_view.as_view(), name='inventory_home'),
+
 ]
