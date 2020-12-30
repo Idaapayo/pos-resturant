@@ -36,7 +36,7 @@
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Add menu item</h5>
+                            <h5 class="modal-title" id="addmenu">Add menu item</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times</span>
                             </button>
@@ -64,7 +64,7 @@
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Add .csv file</h5>
+                            <h5 class="modal-title" id="addcv">Add .csv file</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times</span>
                             </button>
@@ -74,7 +74,6 @@
                              <input type="hidden" name="action" value="upload_form">
                                 {% csrf_token %}
                                 {{ forms.upload_form|crispy }}
-                                {{ forms.upload_form.errors }}
                                  <div class="modal-footer">
                                      <input type="submit" class="btn btn-warning" name="upload_form" value="Upload"/>
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

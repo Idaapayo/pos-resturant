@@ -19,21 +19,20 @@ class Inventory_view(MultiModelFormView):
     }
     success_url = reverse_lazy("inventory_home")
 
-
     def post(self, request, *args, **kwargs):
 
-        # action = self.request.POST.get('action')
+        action = self.request.POST.get('action')
         # action1 = self.request.POST.get('action1')
-        # print(action)
-        # if action == 'product_form':
-        print("submiting prod_form")
-        product_form = ProductsForm(request.POST)
-        self.product_form(product_form, request)
+        print(action)
+        if action == 'product_form':
+            print("submiting prod_form")
+            product_form = ProductsForm(request.POST)
+            self.product_form(product_form, request)
 
-        # if action == 'upload_form':
-        print("submiting upload_form")
-        upload_form = Uploadproducts(request.POST, request.FILES)
-        self.upload_csv(upload_form, request)
+        elif action == 'upload_form':
+            print("submiting upload_form")
+            upload_form = Uploadproducts(request.POST, request.FILES)
+            self.upload_csv(upload_form, request)
         return super().post(request, **kwargs)
 
 
@@ -41,7 +40,6 @@ class Inventory_view(MultiModelFormView):
         """
         fun to process the ProductsForm to store a menu item
         :param form_name:
-        :param form_classes:
         :return:
         """
         product_form = form_name

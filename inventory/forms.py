@@ -21,11 +21,6 @@ class Uploadproducts(ModelForm):
         model = Csv
         fields = ('file_name',)
 
-# class Products_upload(MultiModelForm):
-#     form_classes = {
-#         'product_form': ProductsForm,
-#         'uploadcsv_form': Uploadproducts
-#     }
 
 
 
