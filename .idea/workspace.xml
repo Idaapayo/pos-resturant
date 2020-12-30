@@ -3,15 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f8996247-2d3d-4cf6-8e26-c654aedae1bb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventory/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/excelFiles/menuitems_9CiuV2I.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/excelFiles/menuitems_AkiBWtF.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/excelFiles/menuitems_Flq1Dhr.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/excelFiles/menuitems_VonFXVN.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/excelFiles/menuitems_byUHC0y.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pos/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/pos/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/inventory.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/inventory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/simple-sidebar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -134,7 +127,7 @@
       <workItem from="1609139181599" duration="11257000" />
       <workItem from="1609169126473" duration="1680000" />
       <workItem from="1609232157398" duration="4149000" />
-      <workItem from="1609304523078" duration="3207000" />
+      <workItem from="1609304523078" duration="4381000" />
     </task>
     <servers />
   </component>
