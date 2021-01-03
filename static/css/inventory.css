@@ -1,11 +1,14 @@
 .container-padding{
     padding-top: 10px;
+    padding-left: 30px;
 }
 
 .form-style{
     padding: 10px;
 }
-
+/*.messages{*/
+/*    margin-left: 10px;*/
+/*}*/
 /*.notify{*/
 /*  position:absolute;*/
 /*  top:0px;*/
