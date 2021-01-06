@@ -78,3 +78,9 @@ a.link_style{
   background-color: #000033;
   color: #ffffff;
 }
+.btn-order{
+  color: white;
+  background-color: Transparent;
+  border-color: #fccf14;
+  border-radius: 15px;
+}

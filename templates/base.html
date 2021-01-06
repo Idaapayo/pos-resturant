@@ -27,15 +27,21 @@
             </div>
             <div class="list-group list-group-flush">
                 <a href="/login" class="list-group-item list-group-item-action sidebck"><i
-                        class="fa fa-dashboard"></i>&nbsp;Dashboard</a>
+                        class="far fa-clipboard"></i>&nbsp;Dashboard</a>
                 <a href="{% url 'food_home' %}" class="list-group-item list-group-item-action sidebck"><i
-                        class="fa fa-money" aria-hidden="true"></i>&nbsp;Sell</a>
+                        class="fas fa-hand-holding-usd" aria-hidden="true"></i>&nbsp;Sell</a>
                 <a href="{% url 'inventory_home' %}" class="list-group-item list-group-item-action sidebck"><i
-                        class="fa fa-bar-chart" aria-hidden="true"></i>&nbsp;Inventory</a>
+                        class="fas fa-balance-scale" aria-hidden="true"></i>&nbsp;Inventory</a>
                 <a href="#" class="list-group-item list-group-item-action sidebck"><i class="fas fa-users"
                                                                                                aria-hidden="true"></i>&nbsp;Staff</a>
-                <a href="#" class="list-group-item list-group-item-action sidebck"><i class="fas fa-cutlery"
+                <a href="#" class="list-group-item list-group-item-action sidebck"><i class="fas fa-concierge-bell"
                                                                                                aria-hidden="true"></i>&nbsp;Kitchen</a>
+                <a href="#" class="list-group-item list-group-item-action sidebck"><i class="fas fa-book-open"
+                                                                                               aria-hidden="true"></i>&nbsp;Menu Setup</a>
+                <a href="#" class="list-group-item list-group-item-action sidebck"><i class="far fa-calendar-alt"
+                                                                                               aria-hidden="true"></i>&nbsp;Scheduling</a>
+                <a href="#" class="list-group-item list-group-item-action sidebck"><i class="fas fa-chart-line"
+                                                                                               aria-hidden="true"></i>&nbsp;Reports</a>
                 <a href="#" class="list-group-item list-group-item-action sidebck"><i class="fa fa-cog"
                                                                                                aria-hidden="true"></i>&nbsp;Settings</a>
             </div>
@@ -45,7 +51,12 @@
 
             <nav class="navbar navbar-expand-lg navmain_style border-bottom" id="navbar_style">
                 <div class="container-fluid">
-                    <button class="btn btn-warning" id="sidebarCollapse"><i class="fa fa-bars"></i></button>
+                    <ul class="navbar-nav mr-auto">
+                        <button class="btn btn-warning" id="sidebarCollapse"><i class="fa fa-bars"></i></button>
+                    </ul>
+
+                    <ul class="navbar-nav">
+                        <button class="btn btn-order" id="orders">Orders</button>
 
                      <!-- Dropdown -->
                     {% if user.is_authenticated %}
@@ -60,6 +71,22 @@
                       </div>
                     </ul>
                     {% endif %}
+                    </ul>
+{#                    <button class="btn btn-order" id="orders">Orders</button>#}
+{##}
+{#                     <!-- Dropdown -->#}
+{#                    {% if user.is_authenticated %}#}
+{#                    <ul class="nav-item dropdown">#}
+{#                      <a class="nav-link dropdown-toggle link_style" href="#" id="navbardrop" data-toggle="dropdown">#}
+{#                          <i class="fa fa-user" aria-hidden="true">#}
+{#                             <span>{{ user.username }}</span>#}
+{#                          </i>#}
+{#                      </a>#}
+{#                      <div class="dropdown-menu">#}
+{#                        <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>#}
+{#                      </div>#}
+{#                    </ul>#}
+{#                    {% endif %}#}
                 </div>
             </nav>
 
