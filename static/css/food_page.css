@@ -34,3 +34,12 @@
 .btnextend{
   width: 100%;
 }
+.btn-checkout{
+  background-color: #00ccff;
+}
+.btn-subcateg{
+  /*padding: 10px;*/
+  background-color: #1a488e;
+  display: inline-block;
+  color: white;
+}

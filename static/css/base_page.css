@@ -23,7 +23,7 @@
 
 #sidebar .sidebar-header{
   padding: 20px;
-  border-bottom: 3px solid #ffcc14;
+  border-bottom: 3px solid #00ccff;
 }
 
 #sidebar.active{
@@ -65,7 +65,7 @@
   padding: 0 !important;
 }
 a.link_style{
-  color: #fccf14;
+  color: #00ccff;
 }
 .navside_style{
   background-color: #000033;
@@ -81,6 +81,9 @@ a.link_style{
 .btn-order{
   color: white;
   background-color: Transparent;
-  border-color: #fccf14;
+  border-color: #00ccff;
   border-radius: 15px;
+}
+.btn_sidebar{
+  background-color: #00ccff;
 }

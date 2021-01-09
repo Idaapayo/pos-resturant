@@ -27,7 +27,7 @@
 
         <div class="row">
             <div class="col-md-6">
-                <button type="button" class="btn btn-warning" aria-hidden="true" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-plus"></i>&nbsp;Add menu items</button>
+                <button type="button" class="btn btn-inventory" aria-hidden="true" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-plus"></i>&nbsp;Add menu items</button>
 
                 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-lg">
@@ -46,7 +46,7 @@
 
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <input type="submit" class="btn btn-warning" name="product_form" value="Save changes"/>
+                                    <input type="submit" class="btn btn-inventory" name="product_form" value="Save changes"/>
                                 </div>
                             </form>
                         </div>
@@ -55,7 +55,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <button type="button" class="btn btn-warning" aria-hidden="true" data-toggle="modal" data-target="#upload_modal"><i class="fa fa-plus"></i>&nbsp;Upload file</button>
+                <button type="button" class="btn btn-inventory" aria-hidden="true" data-toggle="modal" data-target="#upload_modal"><i class="fa fa-plus"></i>&nbsp;Upload file</button>
 
                 <div id="upload_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-lg">
@@ -72,7 +72,7 @@
                                 {% csrf_token %}
                                 {{ forms.upload_form|crispy }}
                                  <div class="modal-footer">
-                                     <input type="submit" class="btn btn-warning" name="upload_form" value="Upload"/>
+                                     <input type="submit" class="btn btn-inventory" name="upload_form" value="Upload"/>
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                  </div>
                              </form>
